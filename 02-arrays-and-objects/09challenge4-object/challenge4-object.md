@@ -15,3 +15,55 @@ Destructure the title from the first book and rename the variable to `firstBook`
 ### Step 4
 
 Turn the library object into a JSON string
+
+<details>
+<summary>Click for SOlution</summary>
+
+### Step 1 Solution
+
+```js
+// Step 1
+const library = [
+  {
+    title: 'The Road Ahead',
+    author: 'Bill Gates',
+    status: { own: true, reading: false, read: false },
+  },
+  {
+    title: 'Steve Jobs',
+    author: 'Walter Isaacson',
+    status: { own: true, reading: false, read: false },
+  },
+  {
+    title: 'Mockingjay',
+    author: 'Suzanne Collins',
+    status: { own: true, reading: false, read: false },
+  },
+];
+```
+
+### Step 2 Solution
+
+```js
+//Step2
+library[0].status.read = true;
+library[1].status.read = true;
+library[2].status.read = true;
+```
+
+### Step 3 Solution
+
+```js
+//Step 3
+const { title: firstBook } = library[0];
+console.log(firstBook);
+```
+
+### Step 4 Solution
+
+```js
+const libraryJSON = JSON.stringify(library);
+console.log(libraryJSON);
+```
+
+</details>
