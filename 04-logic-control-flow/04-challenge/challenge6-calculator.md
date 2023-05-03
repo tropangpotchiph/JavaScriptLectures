@@ -17,3 +17,34 @@ calculator(5, 2, '&') // returns an error message
 **Hint:**
 
 - You can use an if statement for the operator, but this is also a good example for using a switch statement.
+
+<details>
+  <summary>Click For Solution</summary>
+
+```JavaScript
+function calculator(num1, num2, operator) {
+let result;
+switch (operator) {
+  case '+':
+    result = num1 + num2;
+    break;
+  case '-':
+    result = num1 - num2;
+    break;
+  case '*':
+    result = num1 * num2;
+    break;
+  case '/':
+    result = num1 / num2;
+    break;
+  default:
+    result = 'Invalid operator';
+}
+console.log(result);
+return result;
+}
+
+calculator(3, 4, '*'); // returns 12
+```
+
+</details>
